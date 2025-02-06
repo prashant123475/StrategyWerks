@@ -1,0 +1,73 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  grid-auto-rows: 1fr;
+  margin-top: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filters select,
+.filters input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.filters button {
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+.error-container {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+body {
+  font-family: "Bodoni";
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #333;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin: 20px 0;
+}

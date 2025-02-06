@@ -1,0 +1,124 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #d9534f;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.modal-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.modal-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-right h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-right p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.product-details {
+  margin-top: 20px;
+}
+
+.product-details p {
+  font-weight: 500;
+}
+
+.product-details strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-left {
+    order: -1;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .modal-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .modal-image {
+    max-height: 300px;
+  }
+}
